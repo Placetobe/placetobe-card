@@ -1,0 +1,75 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../placetobe-styles/placetobe-styles.html">
+
+<!--
+`placetobe-card`
+Placetobe Card
+
+@demo demo/index.html 
+-->
+
+<dom-module id="placetobe-card">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      :host section {
+        @apply(--placetobe-border-box);
+        @apply(--placetobe-border-radius);
+        background-color: var(--placetobe-card-color, var(--placetobe-color-yellow));
+        padding: calc( var(--placetobe-margin) * 2 );
+        text-align: center;
+      }
+
+      :host section header {
+        
+      }
+
+      :host section header h2 {
+        @apply(--placetobe-font-heading3);
+        color: var(--placetobe-card-tint-color, var(--placetobe-color-darkblue));
+      }
+
+      :host section main ::slotted(article) {
+        @apply(--placetobe-font-body-serif);
+        margin: var(--placetobe-margin) 0;
+        color: var(--placetobe-card-tint-color, var(--placetobe-color-darkblue));
+      }
+
+      :host section footer {
+        
+      }
+
+    </style>
+
+    <section>
+      <header>
+        <h2>[[title]]</h2>
+      </header>
+      <main>
+        <slot name="main"></slot>
+      </main>
+      <footer>
+        <slot name="footer"></slot>
+      </footer>
+    </section>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'placetobe-card',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'placetobe-card',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
