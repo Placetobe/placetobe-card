@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../placetobe-styles/placetobe-styles.html">
+<link rel="import" href="../placetobe-behaviors/placetobe-styles-behavior.html">
 
 <!--
 `placetobe-card`
@@ -62,13 +63,7 @@ Placetobe Card
     Polymer({
 
       is: 'placetobe-card',
-
-      properties: {
-        prop1: {
-          type: String,
-          value: 'placetobe-card',
-        },
-      },
+      behaviors: [PlacetobeStylesBehavior]
 
     });
   </script>
