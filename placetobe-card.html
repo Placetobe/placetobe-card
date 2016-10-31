@@ -64,7 +64,14 @@ Placetobe Card
     Polymer({
 
       is: 'placetobe-card',
-      behaviors: [PlacetobeStylesBehavior]
+      behaviors: [PlacetobeStylesBehavior],
+
+      properties: {
+        title: {
+          type: String,
+          value: null
+        }
+      }
 
     });
   </script>
