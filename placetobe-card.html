@@ -31,6 +31,7 @@ Placetobe Card
       :host section header h2 {
         @apply(--placetobe-font-heading3);
         color: var(--placetobe-card-tint-color, var(--placetobe-color-darkblue));
+        margin: calc( var(--placetobe-margin)  - ( var(--placetobe-margin) * 1.5) ) 0;
       }
 
       :host section main ::slotted(article) {
