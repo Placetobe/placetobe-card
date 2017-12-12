@@ -14,7 +14,7 @@ Placetobe Card
   <template>
     <style>
       :host {
-        display: block;
+        display: flex;
       }
 
       :host section {
@@ -23,6 +23,10 @@ Placetobe Card
         background-color: var(--placetobe-card-color, var(--placetobe-color-yellow));
         padding: calc( var(--placetobe-margin) * 2 );
         text-align: center;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       :host section header h2 {
@@ -77,6 +81,10 @@ Placetobe Card
 
       :host([collapsible]) section footer {
         padding-bottom: 3px;
+      }
+
+      .overflow {
+        width: 100%;        
       }
 
     </style>
