@@ -7,7 +7,7 @@
 `placetobe-card`
 Placetobe Card
 
-@demo demo/index.html 
+@demo demo/index.html
 -->
 
 <dom-module id="placetobe-card">
@@ -54,7 +54,7 @@ Placetobe Card
       }
 
       :host([collapsible]) section header h2 {
-        @apply --placetobe-font-body;        
+        @apply --placetobe-font-body;
         @apply --placetobe-flex-item--3;
         padding-left: var(--placetobe-margin);
       }
@@ -85,7 +85,7 @@ Placetobe Card
       }
 
       .overflow {
-        width: 100%;        
+        width: 100%;
       }
 
     </style>
@@ -138,6 +138,16 @@ Placetobe Card
           reflectToAttribute: true
         },
 
+        loaded: {
+          type: Boolean,
+          value: false,
+          notify: true
+        }
+
+      },
+
+      attached: function() {
+         this.set('loaded', true);
       },
 
       toggle: function() {
